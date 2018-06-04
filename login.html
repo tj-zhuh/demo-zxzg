@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>中信重工</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="develop/login/page.css" rel="stylesheet" />
+    <script src="js/rem.js"></script>
+    <script src="develop/index/navigator.js"></script>
+    <script>
+
+        function setFont() {
+            var fontSize = window.top.document.documentElement.clientWidth / 19.19759;
+            fontSize = fontSize < 60 ? 60 : fontSize;
+            document.documentElement.style.fontSize = fontSize + 'px';
+        }
+
+        setFont();
+
+        window.onresize = function () {
+            setFont();
+        }
+
+        window.onload = function () {
+            document.body.style.backgroundColor = '#13335F';
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div class="form">
+            <input id="loginname" type="text" placeholder="请输入登录账号" />
+            <input id="password" type="password" placeholder="请输入登录密码" />
+            <div class="savepsw" id="savepsw">
+                <img src="develop/login/uncheck1.png" />
+                <img src="develop/login/check1.png" class="checked" />
+                自动登录
+            </div>
+            <div class="btn normal" id="btn">立即登录
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/require-2.1.11.js" data-main="develop/login/page"></script>
+</body>
+</html>

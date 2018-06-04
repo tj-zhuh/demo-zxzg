@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>中信重工</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="develop/index/css/page.css" rel="stylesheet" />
+    <link href="develop/index/css/window.css" rel="stylesheet" />
+    <link href="develop/index/css/header.css" rel="stylesheet" />
+    <link href="develop/index/css/menu1.css" rel="stylesheet" />
+    <link href="develop/index/css/menu2.css" rel="stylesheet" />
+    <link href="develop/index/css/left.css" rel="stylesheet" />
+    <script src="js/rem.js"></script>
+    <style>
+        #totop {
+            width: 1rem;
+            height: 1rem;
+            position: fixed;
+            right: 0;
+            top: 8rem;
+            bottom: 0.25rem;
+            border: solid 1px #ccc;
+            cursor: pointer;
+            text-align: center;
+            line-height: 1rem;
+            transition: 0.3s;
+            background-color:#389edc;
+            color:#fff
+        }
+
+        #totop[hide=true] {
+            right: -1.2rem;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="header">
+            <img class="logo" id="logo" src="develop/index/images/logo.png" />
+            <ul class="menu1" id="menu1"></ul>
+            <div class="info">
+                <div class="user">
+                    <img src="develop/index/images/photo.png" />刘东庆
+                </div>
+                <p>太极计算机股份有限公司</p>
+            </div>
+        </div>
+        <div class="leftpanel">
+            <div class="lefttop">
+                <img src="develop/index/images/collapse.png" />
+                <span id='menu1name'></span>
+            </div>
+            <dl class="menu2" id="menu2"></dl>
+        </div>
+        <div class="ui" id="ui"></div>
+    </div>
+
+    <!--编辑窗口-->
+    <div id="editwin" class="hide">
+        <div id="editwin-title"></div>
+        <div id="editwin-body">
+            <ul id="edit-ul">
+                <!--<li><label>ddddddd</label><input /></li>
+                <li><label>ddddddd</label><input /></li>
+                <li><label>ddddddd</label><input /></li>
+                <li><label>ddddddd</label><input /></li>
+                <li><label>ddddddd</label><input /></li>
+                <li><label>ddddddd</label><input /></li>-->
+            </ul>
+
+        </div>
+        <div id="bottom-confirm">
+            <div class="btn">保存</div>
+            <div class="btn">取消</div>
+        </div>
+    </div>
+
+
+
+    <!--***-->
+    <div class="mo hide" id="mo"></div>
+
+    <!--操作管理--关键参数-->
+    <div class="panel win hide" id="win6-1">
+        <div class="panel-title"><p>监控趋势图</p></div>
+        <ul class="query-conditions">
+            <li>
+                <select>
+                    <option>SPVC</option>
+                </select>
+            </li>
+            <li>
+                <select>
+                    <option>VCM加料槽压力</option>
+                </select>
+            </li>
+            <li><div class="btn">1小时</div></li>
+            <li><div class="btn">3小时</div></li>
+            <li><input value="2016/12/01 14:00"/><label>至</label><input value="2016/12/01 16:00" /></li>
+            <li><div class="btn">查询</div></li>
+        </ul>
+        <div class="chart-container" id="chart6-1"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="develop/index/navigator.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/require-2.1.11.js" data-main="develop/index/page"></script>
+</body>
+</html>

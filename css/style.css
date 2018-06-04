@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 0.18rem;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+}
+
+select, input {
+    outline: 0;
+    box-sizing: border-box;
+    width: 1.2rem;
+    height: 0.3rem;
+    margin: 0 0.15rem;
+    text-indent: 0.1rem;
+    font-size: 0.14rem;
+}
+
+option {
+    font-size: 0.14rem;
+}
+
+/*操作类*/
+.display {
+    display: none;
+}
+
+/*fxcking agent*/
+strong,b,th{
+
+font-weight:normal
+
+}
+
+
+
+
+
+/**********************************************************以上是全局预设**********************************************************************/
+
+/****************************************************
+*                                                   *
+*                    panel布局                      *
+*                                                   *
+****************************************************/
+
+.container {
+    padding-left: 0.28rem;
+    padding-top: 0.09rem;
+    padding-right: 0.28rem;
+}
+
+.panel {
+    margin-top: 0.28rem;
+    background-color:#fff;
+}
+
+.panel-title {
+    height: 0.48rem;
+    background-color: #fafafa;
+}
+
+.panel-title p {
+    font-size: 0.18rem;
+    color: #3c3c43;
+    font-family: 'Microsoft YaHei';
+    line-height: 0.48rem;
+    text-indent: 0.2rem;
+}
+
+
+
+
+/*统一表格/报表样式*/
+.report {
+    border-collapse: collapse;
+    border-left: solid 1px #d7d7d7;
+    border-top: solid 1px #d7d7d7;
+}
+
+.report tr {
+}
+
+.report td, .report th {
+    padding: 0 0.1rem;
+}
+
+
+.report th {
+    border: 1px solid #d7d7d7;
+    font-size: 0.15rem;
+    line-height: 0.4rem;
+    font-family: SimSun;
+    /*font-weight: bold;*/
+    color: #484848;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.report td {
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    line-height: 0.3rem;
+    font-size: 0.13rem;
+    font-family: SimSun;
+    color: #757575;
+    text-align: center;
+}
+
+.report.left-head td {
+    border: 1px solid #d7d7d7;
+}
+
+
+.report:not(.left-head) tr.odd:hover {
+    background: #cfebf1;
+}
+
+.report:not(.left-head) tr.even {
+    background-color: #d7e6f4;
+}
+
+.report:not(.left-head) tr.even:hover {
+    background-color: #cfebf1;
+}
+
+
+.report.left-head td {
+}
+
+/****************************************************/
+.normalTable {
+    border-collapse: collapse;
+    border-left: solid 1px #d7d7d7;
+    border-top: solid 1px #d7d7d7;
+    border-bottom: solid 1px #d7d7d7;
+}
+
+.normalTable th {
+    border: 1px solid #d7d7d7;
+    font-size: 0.16rem;
+    line-height: 0.4rem;
+    font-family: SimSun;
+    /*font-weight: bold;*/
+    color: #484848;
+    text-align: center;
+    background-color: #fafafa;
+    padding: 0 0.1rem;
+}
+
+.normalTable td {
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+    line-height: 0.3rem;
+    font-size: 0.13rem;
+    font-family: SimSun;
+    color: #757575;
+    text-align: center;
+    padding: 0 0.1rem;
+}
+
+.normalTable tr.odd {
+}
+
+.normalTable tr.even {
+    background-color: #fafafa;
+}
+
+.normalTable tr.odd:hover {
+    background-color: #cfebf1;
+}
+
+.normalTable tr.even:hover {
+    background-color: #cfebf1;
+}
+
+
+
+/****************************************************
+*                                                   *
+*                     查询条件                      *
+*                                                   *
+****************************************************/
+
+.query-conditions {
+    margin-bottom: 0.15rem;
+    clear: both;
+    padding-left: 0.2rem;
+    margin-top: 0.15rem;
+    padding-bottom: 0.3rem;
+}
+
+.query-conditions li {
+    /*min-width: 1.8rem;*/
+    float: left;
+    margin-left: 0.2rem;
+}
+
+.query-conditions label {
+    font-size: 0.14rem;
+    color: #484848;
+}
+
+.topbar .query-buttons {
+    margin-left: 0.25rem;
+    float: left;
+    clear: both;
+}
+
+.topbar .query-buttons li {
+    float: left;
+    margin-left: 0.2rem;
+    margin-bottom: 0.1rem;
+}
+
+.btn {
+    color: #fff;
+    background-color: #3788ca;
+    padding: 0.03rem 0.15rem;
+    /*border:solid 1px #ccc;*/
+    /*transition:0.2s;*/
+    cursor: pointer;
+    font-size: 0.14rem;
+    float: left;
+    border-radius:0.03rem;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.btn:hover {
+    opacity: 0.7;
+    background-color:#3e94dc;
+    /*border-width:5px;*/
+}
+
+.btn:active {
+    background-color: #2e7bbc;
+    /*border-color:#000;*/
+}
+
+
+
+.topbar .legend-ul {
+    float: right;
+}
+
+.topbar .legend-ul > li {
+    margin-right: 0.3rem;
+    float: left;
+}
+
+.legend {
+    float: left;
+    width: 0.25rem;
+    height: 0.25rem;
+    line-height: 0.25rem;
+    font-size: 0.15rem;
+    font-family: 'Microsoft YaHei';
+    margin-right: 0.1rem;
+    margin-top: -0.01rem;
+    text-align: center;
+    border-radius: 25% 25%;
+    text-align: center;
+}
+
+
+.gray {
+    background-color: gray;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+    color: #fff;
+}
+
+.green {
+    background-color: green;
+    color: #fff;
+}
+
+.purple {
+    background-color: purple;
+    color: #fff;
+}
+
+/*renderer样式*/
+.redDiv {
+    background-color: red;
+    color: #fff;
+}
+
+.yellowDiv {
+    background-color: yellow;
+    color: #000;
+}
+
+.greenDiv {
+    background-color: green;
+    color: #fff;
+}
+
+.blueDiv {
+    background-color: blue;
+    color: #fff;
+}
+
+.orangeDiv {
+    background-color: orange;
+    color: #fff;
+}
+
+.grayDiv {
+    background-color: gray;
+    color: #fff;
+}
+
+.purpleDiv {
+    background-color: purple;
+    color: #fff;
+}
+
+.colorDiv {
+    width: 0.2rem;
+    height: 0.2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-container {
+    width: 96%;
+    margin-left: 2%;
+    margin-top: 0.2rem;
+    overflow: auto;
+}
