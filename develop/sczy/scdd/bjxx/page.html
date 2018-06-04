@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>报警信息</title>
+    <!--<link href="../../../css/zbcStyle.css" rel="stylesheet" />-->
+    <link href="../../../../css/style.css" rel="stylesheet" />
+    <link href="../../../../lib/tb/tbcss.css" rel="stylesheet" />
+    <link href="page2.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="panel" id="panel1">
+            <div class="panel-title"><p>报警信息</p></div>
+            <div class="topbar">
+                <ul class="query-conditions">
+                    <li><label>日期</label><input /></li>
+					<li><label>报警类型</label><select><option></option><option>物料短缺报警</option><option>计划延期报警</option><option>设备故障报警</option></select></li>
+                    <li><div class="btn">查询</div></li>
+            </div>
+
+            <div class="grid-container" id="grid1">
+            </div>
+
+            <!--注意现在还暂时不做翻页，预留位置-->
+            <div class="pagin"></div>
+        </div>
+		<div class="panel" id="panel2">
+			<div class="echarts-panel" id="echarts1"></div>
+			<div class="echarts-panel" id="echarts2"></div>
+		</div>
+    </div>
+
+    <script src="../../../../js/rem.js"></script>
+
+    <script src="../../../../js/config.js"></script>
+    <script src="../../../../js/require-2.1.11.js" data-main="page"></script>
+</body>
+</html>

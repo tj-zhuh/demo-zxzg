@@ -1,0 +1,172 @@
+﻿
+* td {
+    /*padding-top:5px;
+     padding-bottom:5px;*/
+    font-size: 14px;
+    min-width: 100px;
+}
+
+* th {
+    min-width: 100px;
+}
+
+/*表格容器*/
+.container .grid-container {
+    height: 240px;
+}
+
+.container .topbar {
+    height: 90px;
+}
+
+ul.bar-content {
+    margin-top: 10px;
+    height: 18px;
+}
+
+ul.bar-content li {
+    float: left;
+    width: 200px;
+}
+
+ul.bar-content li.withTwoTimeInput {
+    width: 312px;
+}
+
+ul.bar-content li label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+ul.bar-content li input {
+    width: 100px;
+}
+
+ul.bar-content li select {
+    width: 100px;
+    height: 22px;
+}
+
+.tb-edit {
+    margin-left: 39%;
+}
+
+.tb-delete {
+    margin-left: 10%;
+}
+
+
+
+
+.redDiv {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: #fff;
+}
+
+.yellowDiv {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+    color: #000;
+}
+
+.greenDiv {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    color: #fff;
+}
+
+.blueDiv {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    color: #fff;
+}
+
+.purpleDiv {
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    color: #fff;
+}
+
+
+
+.topGrid {
+    width: 99%;
+    height: 332px;
+    /*border:solid 1px #ccc;*/
+}
+
+.bottomLeftGrid {
+    float: left;
+    width: 49.5%;
+    height: 300px;
+    /*border:solid 1px #ccc;*/
+    border-right: solid 1px #ccc;
+}
+
+.bottomRightGrid {
+    float: left;
+    width: 49.4%;
+    height: 300px;
+    /*border:solid 1px #ccc;*/
+}
+
+.topText {
+    height: 90px;
+    width: 100%;
+    border: none;
+}
+
+.legend {
+    float: left;
+    width: 40px;
+    height: 32px;
+    margin-right: 5px;
+}
+
+ul.legend-ul {
+    clear: both;
+}
+
+ul.legend-ul li {
+    float: left;
+    width: 150px;
+    height: 32px;
+}
+
+.purple {
+    background-color: purple;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.bottom-right-topbar {
+    height: 74px;
+}
+
+ul.bottom-right-ul li {
+    float: left;
+}
+
+ul.bottom-right-ul li input {
+    width: 50px;
+}
+
+ul.bottom-right-ul li select {
+    width: 50px;
+}

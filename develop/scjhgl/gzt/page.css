@@ -1,0 +1,217 @@
+﻿.panel {
+    padding-bottom: 0.1rem;
+}
+
+.line1 {
+    height: 2.3rem;
+}
+
+.line2 {
+    height: 3.1rem;
+}
+
+.line3 {
+    height: 3.2rem;
+}
+
+.line4 {
+    height: 5.5rem;
+}
+
+.column1 {
+    width: 13rem;
+    float: left;
+}
+
+.column2 {
+    margin-left: 13.28rem;
+}
+
+
+
+.task-info {
+    float: left;
+    width: 100%;
+    height: 2rem;
+    /*border-right:solid 1px #ccc;*/
+    /*border-bottom:solid 1px #ccc;*/
+}
+
+.task-info li {
+    float: left;
+    margin-left: 0.7rem;
+    margin-top: 0.3rem;
+    position: relative;
+}
+
+.top-btn-img {
+    width: 0.8rem;
+    height: 0.8rem;
+    background-size: contain;
+    /*border: solid 1px #ccc;*/
+    cursor: pointer;
+    margin: auto;
+    background-image: url(../../../images/top-btn-img.png);
+    background-repeat: no-repeat;
+}
+
+.top-btn {
+    padding: 0.05rem 0.2rem;
+    background-color: #f5f5f5;
+    color: #6a6967;
+    user-select: none;
+    cursor: pointer;
+    font-size:0.14rem;
+    border-radius:1rem;
+    margin-top: 0.2rem;
+}
+
+.top-btn:hover {
+    background-color: #399edd;
+    color:#fff;
+}
+
+.top-btn:active {
+    background-color: blue;
+}
+
+.top-btn::before {
+    content: '2';
+    position: absolute;
+    right: -0.05rem;
+    top: 0.95rem;
+    width: 0.16rem;
+    height: 0.16rem;
+    background-color: red;
+    line-height: 0.16rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 0.12rem;
+}
+
+#btn1::before {
+    content: '1';
+}
+
+#btn2::before {
+    content: '3';
+}
+
+#btn3::before {
+    content: '4';
+}
+
+#btn4::before {
+    content: '5';
+}
+
+#btn5::before {
+    content: '3';
+}
+
+#btn6::before {
+    content: '2';
+}
+
+.btn {
+    position: relative;
+}
+
+.btn:before {
+    content: '2';
+    position: absolute;
+    right: -0.1rem;
+    top: -0.1rem;
+    width: 0.2rem;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+.Date {
+    /*width:24%;*/
+    /*margin-left:76%;*/
+    height: 2rem;
+    /*border-left:solid 1px #ccc;*/
+    /*border-bottom:solid 1px #ccc;*/
+    background-image: url(../../../images/rili.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 0.25rem;
+}
+
+#grid1 {
+    /*height:3rem;*/
+    /*width:*/
+}
+
+.ggb {
+    margin: 0.1rem;
+    padding-top: 0.05rem;
+}
+
+.ggb li {
+    margin-top: 0.05rem;
+    font-size: 0.14rem;
+    cursor: pointer;
+    line-height: 0.3rem;
+    margin-left: 0.2rem;
+    font-family:'Microsoft YaHei'
+}
+
+.ggb li:hover {
+    text-decoration: underline;
+    color: #389edc;
+}
+
+.ggb li:active {
+    text-decoration: underline;
+    color: purple;
+}
+
+
+
+#grid2 {
+    float: left;
+    width: 49%;
+    height: 3.3rem;
+}
+
+#chart1 {
+    width: 5.9rem;
+    height: 2.41rem;
+    margin-left: 51%;
+    margin-top: 0.2rem;
+}
+
+#grid3 {
+    width: 49%;
+    float: left;
+}
+
+#chart2 {
+    float: left;
+    width: 49%;
+    height: 4.2rem;
+}
+
+#tb1 {
+    width: 48%;
+}
+
+#tb1 th {
+    border: solid 1px #ccc;
+}
+
+#tb1 td {
+    border: solid 1px #ccc;
+}

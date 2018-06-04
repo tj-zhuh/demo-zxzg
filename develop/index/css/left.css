@@ -1,0 +1,27 @@
+﻿.leftpanel {
+    background-color:#a4c9d4;
+    float: left;
+    width: 2rem;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;    
+    overflow: hidden;
+}
+
+.lefttop {
+    font-size:0.18rem;
+    font-family:'Microsoft YaHei';
+    font-weight:bold;
+    color:#008399;
+    height:0.73rem;
+    line-height:0.73rem;
+    border-bottom:2px solid #bee3ee;
+}
+
+.lefttop img {
+    width:0.36rem;
+    height:0.36rem;
+    margin-top:0.2rem;
+    margin-left:0.2rem;
+    margin-right:0.15rem;
+    margin-bottom:-0.11rem;
+}

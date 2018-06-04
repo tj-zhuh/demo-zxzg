@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        textarea {
+            height: 800px;
+            width: 400px;
+            font-family:SimSun;
+            font-size:18px;
+            line-height:25px;
+            padding-left:55px;
+            float:left;
+        }
+        #tran {
+            border:1px solid #ccc;
+            width:100px;
+            height:100px;
+            font-size:30px;
+            text-align:center;
+            line-height:100px;
+            float:left;
+            margin-left:50px;
+            margin-right:50px;
+            margin-top:350px;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        var menus = "";
+    </script>
+</head>
+<body>
+    <textarea id="t1">
+生产计划 scjhgl
+ 工作台 gzt
+ 生产任务 scrw
+  技术准备令管理 jszbl
+  生产工作令管理 scgzl
+  物料需求计划 wlsqd
+ 派工单 pgdgl
+  派工单下发 pgd
+  派工单跟踪 scsj
+发货通知 fyjhgl
+ 发货通知管理 fyjh
+生产作业 sczy
+ 生产调度 scdd
+  生产预警信息管理 bjxx
+ 质检过程管理 zjgcgl
+  质检单管理 zjd
+仓储物流 ccwlgl 
+ 入库管理 ccwl
+设备管理 sbgl
+ 检修管理 sbjxxx
+    </textarea>
+    <div id="tran">=></div>
+    <textarea id="t2"></textarea>
+    <script>
+
+        var t = document.getElementsByTagName('textarea')[0];
+        var text = t.value;
+
+        var r = '';
+        r += text;
+        var index = r.indexOf('\n');
+
+        var safe = 0;
+        var ids = [];
+        var output = "";
+        var firstLine = true;
+
+        add("define(function () {");
+        add("    var arr = [");
+
+
+        function add(str) {
+            output += str + "\n";
+        }
+
+        while (index >= 0) {
+            var line = r.substring(0, index);
+            r = r.substring(index + 1);
+            func(line);
+            index = r.indexOf('\n');
+
+            if (safe++ > 1000) throw new Error();
+        } 
+
+        function func(line) {
+            line = line.replace(/\s*$/, '');  // 删除右侧空格
+            var blanks = line.match(/^\s*/);  // 获取左侧空格
+            var num = blanks[0].length;  // 左侧空格的数目
+            var level = num / 1 + 1;  // 层级
+            line = line.replace(/^\s*/, ''); // 删除左侧空格
+            var name = line.match(/^[^\s]+/)[0]; // 获取名字
+            var folder = line.match(/[^\s]*$/)[0]; // 获取文件夹
+            var suspend = name == folder;
+            ids[level - 1] = (ids[level - 1] ? ids[level - 1] : 0) + 1;
+            ids.length = level;
+            var menuId = ids.join('-');
+            var parentId = level == 1 ? 'root' : ids.slice(0, ids.length - 1).join('-');
+
+            if (firstLine) {
+                add('        {');
+            } else {
+                add('        ,{');
+            }
+
+            add('            menuId: "' + menuId + '",');
+            add('            menuName: "' + name + '",');
+            add('            level: ' + level + ',');
+            add('            folder: "' + (suspend ? '404' : folder) + '",');
+            add('            parentId: "' + parentId + '"' + (suspend ? ',' : ''));            
+            if (suspend)
+                add('            suspend: "' + 1 + '"');
+            add('    }');
+
+            firstLine = false;
+        }
+
+
+        add("    ];");
+
+        add('var tmp = []; var result = []; for (var i = 0; i < arr.length; i++) { var x = arr[i]; if (x.menuName.match(/^#/)) { tmp.push(x) } else { result.push(x) } } for (var i = 0; i < result.length; i++) { for (var j = 0; j < tmp.length; j++) { if (tmp[j].parentId == result[i].menuId) { result[i].tabs = result[i].tabs || ""; result[i].tabs += tmp[j].folder + tmp[j].menuName  + "," } } };return result;');
+
+        add("})");        
+
+        document.getElementById('t2').value = output;
+
+    </script>
+</body>
+</html>  

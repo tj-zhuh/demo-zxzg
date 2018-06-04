@@ -1,0 +1,227 @@
+﻿.panel{
+    max-width:20rem;
+    max-height:6rem;
+}
+
+#panel0{
+    clear:both;
+    padding:0;
+    border-bottom:none;
+}
+
+#panel1{
+    float:left;
+    width:73%;
+    /*height:2rem;*/
+    margin-right:0;
+
+}
+
+#panel2{
+    /*height:2rem;*/
+    margin-left:75.3%;
+    max-height:3.1rem;
+    overflow:auto;
+}
+
+#panel3{
+    float:left;
+    width:73%;
+    /*height:2rem;*/
+    margin-right:0;
+
+}
+
+#panel4{
+    /*height:2rem;*/
+    margin-left:75.3%;
+    
+}
+
+
+#panel5{
+    float:left;
+    width:73%;
+    /*height:2rem;*/
+    margin-right:0;
+
+}
+
+#panel6{
+    /*height:2rem;*/
+    margin-left:75.3%;
+    
+}
+
+.task-info{
+    float:left;
+    width:75%;
+    height:2.16rem;
+    border-right:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+}
+
+.task-info li{
+    float:left;
+    margin-left: 0.4rem;
+    margin-top: 0.3rem;
+    position:relative;    
+}
+
+.top-btn-img{
+    width: 0.8rem;
+    height: 0.8rem;
+    background-size: contain;
+    /*border: solid 1px #ccc;*/
+    cursor:pointer;
+    margin: auto;
+    background-image:url(../../../images/top-btn-img.png);
+    background-repeat:no-repeat;
+}
+
+.top-btn{
+    padding:0.1rem 0.2rem;
+    background-color:#389edc;
+    color:#fff;
+    user-select:none;
+    cursor:pointer;
+    margin-top: 0.2rem;
+}
+.top-btn:hover{background-color:#399edd;}
+.top-btn:active{background-color:blue;}
+
+.top-btn::before{
+    content: '2';
+    position: absolute;
+    right: -0.1rem;
+    top: 0.9rem;
+    width: 0.2rem;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+
+}
+
+
+
+.Date{
+    width:24%;
+    margin-left:76%;
+    height:2.16rem;
+    border-left:solid 1px #ccc;
+    border-bottom:solid 1px #ccc;
+}
+
+#grid1{
+    /*height:3rem;*/
+    /*width:*/
+}
+
+.ggb{
+    margin:0.1rem;
+    /*border:solid 1px #ccc;*/
+
+}
+.ggb li{
+    margin-top:0.05rem;
+    font-size:0.14rem;
+    cursor:pointer;
+}
+.ggb li:hover{
+    text-decoration:underline;
+    color:#389edc;
+}
+
+.ggb li:active{
+    text-decoration:underline;
+    color:purple;
+}
+
+.ggb li.odd{
+    background-color:#f9f9f9;
+}
+
+.sys-info{
+    margin:0.1rem;
+    /*border:solid 1px #ccc;*/
+
+}
+.sys-info li{
+    margin-top:0.05rem;
+    font-size:0.14rem;
+    cursor:pointer;
+}
+.sys-info li:hover{
+    text-decoration:underline;
+    color:#389edc;
+}
+
+.sys-info li:active{
+    text-decoration:underline;
+    color:purple;
+}
+
+.sys-info li.odd{
+    background-color:#f9f9f9;
+}
+
+.storage-info{
+    margin:0.1rem;
+    /*border:solid 1px #ccc;*/
+
+}
+.storage-info li{
+    margin-top:0.05rem;
+    font-size:0.14rem;
+    cursor:pointer;
+}
+.storage-info li:hover{
+    text-decoration:underline;
+    color:#389edc;
+}
+
+.storage-info li:active{
+    text-decoration:underline;
+    color:purple;
+}
+
+.storage-info li.odd{
+    background-color:#f9f9f9;
+}
+
+#grid2{
+    float:left;
+    width:49%;
+}
+#chart1{
+    float:left;
+    width:49%;
+    height:2.7rem;
+}
+#grid3{
+    width:49%;
+    float:left;
+}
+
+#chart2{
+    float:left;
+    width:49%;
+    height:4.2rem;
+}
+
+#tb1{
+    width: 48%;
+}
+#tb1 th{
+    border:solid 1px #ccc;
+}
+#tb1 td{
+    border:solid 1px #ccc;
+
+}
+
+
+
+
+
+

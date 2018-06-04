@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        textarea {
+            height: 800px;
+            width: 400px;
+            font-family:SimSun;
+            font-size:18px;
+            line-height:25px;
+            padding-left:55px;
+            float:left;
+        }
+        #tran {
+            border:1px solid #ccc;
+            width:100px;
+            height:100px;
+            font-size:30px;
+            text-align:center;
+            line-height:100px;
+            float:left;
+            margin-left:50px;
+            margin-right:50px;
+            margin-top:350px;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        var menus = "";
+    </script>
+</head>
+<body>
+    <textarea id="t1">
+工艺管理 gygl
+ 工艺管理
+  工艺路线管理
+  工艺规程管理
+  工艺版本管理
+ 图纸管理
+  二维图纸管理
+  三维图纸管理
+  图纸版本管理
+ BOM管理
+  BOM同步管理
+  BOM查询
+  BOM版本管理
+生产计划 scjhgl
+ 工作台 gzt
+ 生产任务 scrw
+  技术准备令管理 jszbl
+  生产工作令管理 scgzl
+  二级计划分解
+  物料需求计划 wlsqd
+ 生产准备 sczb
+  技术准备 zjd
+  工序定额准备 scsj
+  备料和配料准备 bjxx
+ 派工单 pgdgl
+  APS计划接收 ccwl
+  派工单下发 sbjxxx
+  派工单跟踪 pgd
+发货通知 fyjh
+采购管理 cggl
+ 采购需求计划管理
+ 供应商档案管理
+ 物料信息管理
+ 合同模板管理
+ 合同管理
+ 订单管理
+ 库存管理
+ 结算管理
+ 采购订单跟踪
+ 原件信息追溯
+ 领用计划管理
+ 质量异议管理
+生产作业 sczy
+ 生产准备
+  派工单接收确认
+  齐套性检查
+ 生产进度管理
+  生产报工管理 scjd
+  质检申请管理
+  产成品入库申请
+  生产异常信息
+  车间工时统计
+ 生产调度
+  生产状态监视
+  生产预警信息管理
+  计划调整
+质量管理 zlgl
+ 基础数据管理
+  检验项目管理
+  检验标准管理
+  检验方法管理 
+ 质检过程管理 zjgcgl
+  质检单管理 zjd
+  质检结果管理
+  质检审核管理
+  质量追溯
+ 不合格品管理
+  不合格品单生成
+  不合格品维护
+  不合格品统计
+仓储物流 ccwlgl
+ 发料管理 
+ 入库管理 ccwl
+ 出库管理
+ 库存盘点
+ 领料管理
+ 调拨管理
+ 退库管理
+ 物料配送
+ 批次追踪
+设备管理 sbgl
+ 设备基本信息管理
+ 设备状态监控
+ 设备运行记录与分析
+ 检修管理 sbjxxx
+能源管理 nygl
+ 能源数据采集与处理
+ 能源综合分析
+成本管理 cbgl
+ 原料消耗管理
+ 制造费用管理
+ 标准成本与实际成本差异分析
+人员管理 rygl
+ 基础信息管理
+ 人员工时统计
+ 人员操作管理
+ 人工费用管理
+主数据管理 zsjgl
+ 组织架构管理
+  企业主数据
+  工厂主数据
+  车间主数据
+  工段主数据
+  班组主数据
+  人员主数据
+  设备主数据
+ 物料管理
+  物料相关
+  仓储相关
+  质量控制信息
+  包装相关
+ 统计指标计算公式
+  统计原则
+    </textarea>
+    <div id="tran">=></div>
+    <textarea id="t2"></textarea>
+    <script>
+
+        var t = document.getElementsByTagName('textarea')[0];
+        var text = t.value;
+
+        var r = '';
+        r += text;
+        var index = r.indexOf('\n');
+
+        var safe = 0;
+        var ids = [];
+        var output = "";
+        var firstLine = true;
+
+        add("define(function () {");
+        add("    var arr = [");
+
+
+        function add(str) {
+            output += str + "\n";
+        }
+
+        while (index >= 0) {
+            var line = r.substring(0, index);
+            r = r.substring(index + 1);
+            func(line);
+            index = r.indexOf('\n');
+
+            if (safe++ > 1000) throw new Error();
+        } 
+
+        function func(line) {
+            line = line.replace(/\s*$/, '');  // 删除右侧空格
+            var blanks = line.match(/^\s*/);  // 获取左侧空格
+            var num = blanks[0].length;  // 左侧空格的数目
+            var level = num / 1 + 1;  // 层级
+            line = line.replace(/^\s*/, ''); // 删除左侧空格
+            var name = line.match(/^[^\s]+/)[0]; // 获取名字
+            var folder = line.match(/[^\s]*$/)[0]; // 获取文件夹
+            var suspend = name == folder;
+            ids[level - 1] = (ids[level - 1] ? ids[level - 1] : 0) + 1;
+            ids.length = level;
+            var menuId = ids.join('-');
+            var parentId = level == 1 ? 'root' : ids.slice(0, ids.length - 1).join('-');
+
+            if (firstLine) {
+                add('        {');
+            } else {
+                add('        ,{');
+            }
+
+            add('            menuId: "' + menuId + '",');
+            add('            menuName: "' + name + '",');
+            add('            level: ' + level + ',');
+            add('            folder: "' + (suspend ? '404' : folder) + '",');
+            add('            parentId: "' + parentId + '"' + (suspend ? ',' : ''));            
+            if (suspend)
+                add('            suspend: "' + 1 + '"');
+            add('    }');
+
+            firstLine = false;
+        }
+
+
+        add("    ];");
+
+        add('var tmp = []; var result = []; for (var i = 0; i < arr.length; i++) { var x = arr[i]; if (x.menuName.match(/^#/)) { tmp.push(x) } else { result.push(x) } } for (var i = 0; i < result.length; i++) { for (var j = 0; j < tmp.length; j++) { if (tmp[j].parentId == result[i].menuId) { result[i].tabs = result[i].tabs || ""; result[i].tabs += tmp[j].folder + tmp[j].menuName  + "," } } };return result;');
+
+        add("})");        
+
+        document.getElementById('t2').value = output;
+
+    </script>
+</body>
+</html>  

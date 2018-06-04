@@ -1,0 +1,61 @@
+﻿
+body, html {
+    height: 100%;
+}
+
+.container {
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 1280px;
+    padding:0;
+}
+
+.ui {
+    margin-left: 2rem;
+    margin-bottom: -9999px;
+    padding-bottom: 9999px;
+    background-color: #f2f2f2;
+}
+
+.ui.hide-left {
+    margin-left: 0;
+}
+
+
+
+#ptitle {
+    margin-left: 2.67rem;
+    margin-top: 0.1rem;
+    position:relative;
+    height:0.16rem;
+}
+
+#ptitle cite {
+    position:absolute;
+    width: 0.04rem;
+    height: 0.16rem; 
+    background-color: #009d47;
+    margin-right:0.1rem;
+    margin-top: 0.02rem;
+    z-index:1;
+}
+
+#ptitle-name {
+    position:absolute;
+    left:0.2rem;
+    font-size:0.16rem;
+    font-family:'Microsoft YaHei';
+    font-weight:bold;
+    color:#009d47;
+    padding-right:0.23rem;
+    background-color:#fff;
+    z-index:1;
+}
+
+.ptitle-line {
+    position: absolute;
+    left: 0.5rem;
+    right: 0.5rem;
+    top: 0.12rem;
+    border-top: 1px dashed #dfdfdf;
+}

@@ -1,0 +1,63 @@
+﻿  
+#panel1 {
+    /*height: 5rem;*/
+}
+
+#panel2 {
+    width: 46%;
+    /*height: 5rem;*/
+    float: left;
+    margin-right: 0;
+}
+
+#panel3 {
+    width: 51%;
+    /*height: 5rem;*/
+    float: right;
+    margin-left: 0;
+    margin-right: 0.1rem;
+} 
+
+#grid1 {
+    /*height: 2.42rem;*/
+}
+
+#grid2 {
+    /*height: 3.25rem;*/
+}
+
+#grid3 {
+    /*height: 2.42rem;*/
+}
+
+.topbar .info {
+    margin-left:0.4rem;
+}
+
+.topbar .info li {
+    float:none;
+    font-size:0.15rem;
+    height:0.24rem;
+    font-family:'Microsoft YaHei';
+}
+
+.topbar .info label {
+    width:1rem;
+    float:left;
+    text-align:right;
+    font-size:0.15rem;
+    margin-right:0.1rem;
+    font-family:'Microsoft YaHei';
+}
+
+.query-conditions.bottom-right input,
+.query-conditions.bottom-right select{
+    width:0.8rem;
+}
+
+.query-conditions.bottom-right li{
+    width:1.8rem;
+    /*margin-right:0.2rem;*/
+}
+
+

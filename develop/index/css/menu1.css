@@ -1,0 +1,35 @@
+﻿
+.menu1 {
+    float: left;
+    margin-left:0.8rem;
+}
+
+.menu1 li {
+    float:left;
+    width:0.9rem;
+    height:0.86rem;
+    margin-top:0.08rem;
+    margin-left:0.09rem;
+    margin-right:0.09rem;
+    font-size:0.15rem;
+    font-family:'Microsoft YaHei';
+    color:#fff;
+    cursor:pointer;
+    text-align:center;
+}
+
+.menu1 li.active {
+    background: rgba(255,255,255, 0.2);
+    border-radius:0.08rem;
+    cursor:default;
+}
+
+.menu1 img {
+    width:0.5rem;
+    height:0.5rem;
+    display:block;
+    margin-top:0.08rem;
+    margin-bottom:0.02rem;
+    margin-left:auto;
+    margin-right:auto;
+}

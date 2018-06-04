@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>gzt</title>
+    <link href="../../../css/style.css" rel="stylesheet" />
+    <link href="../../../lib/tb/tbcss.css" rel="stylesheet" />
+    <link href="page.css" rel="stylesheet" />
+</head>
+<body>
+    <!--<h1>用户管理</h1>-->
+    <div class="container">
+        <div class="panel line1 column1" id="panel0">
+            <div class="panel-title"><p>当月任务信息</p></div>
+            <div class="task-info">
+                <ul>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn1">技术准备令</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn2">生产工作令</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn3">在执行工单</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn4">返修工单</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn5">完工数量</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn6">物料采购</div></li>
+                    <li><div class="top-btn-img"></div><div class="top-btn" id="btn7">发货计划</div></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="panel line1 column2" id="panel00">
+            <div class="panel-title"><p>日历</p></div>
+            <div class="Date"></div>
+        </div>
+        <div class="panel line2 column1" id="panel1">
+            <div class="panel-title"><p>预警报警信息</p></div>
+            <ul class="query-conditions">
+                <li><div class="btn">计划超期报警</div></li>
+                <li><div class="btn">物料报警</div></li>
+                <li><div class="btn">设备报警</div></li>
+            </ul>
+            <div class="grid-container" id="grid1"></div>
+        </div>
+        <div class="panel line2 column2" id="panel2">
+            <div class="panel-title"><p>待办事项</p></div>
+            <div class="ggb">
+                <ul>
+                    <li class="odd">1、检查070512的采购进度</li>
+                    <li>2、北京消防机器人发货</li>
+                    <li class="odd">3、3台返修机器人需要在今天处理</li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel line3 column1" id="panel3">
+            <div class="panel-title"><p>计划执行率</p></div>
+
+            <div class="grid-container" id="grid2">
+                <table class='report left-head'>
+                    <tr><th></th><th>计划量</th><th>未开工量</th><th>执行中量</th><th>延期量</th><th>已完工量</th></tr>
+                    <tr class="odd"><th>特种机器人车间</th><td>33</td><td>4</td><td>12</td><td>5</td><td>12</td></tr>
+                    <tr class="even"><th>PCBA车间</th><td>34</td><td>5</td><td>17</td><td>1</td><td>11</td></tr>
+                    <tr class="odd"><th>电控柜车间</th><td>23</td><td>2</td><td>15</td><td>1</td><td>5</td></tr>
+                    <tr class="even"><th>变频器功率单元车间</th><td>42</td><td>1</td><td>17</td><td>7</td><td>17</td></tr>
+                    <tr class="odd"><th>变频产品总装车间</th><td>28</td><td>3</td><td>15</td><td>5</td><td>5</td></tr>
+                </table>
+            </div>
+            <div class="chart-container" id="chart1"></div>
+
+        </div>
+        <div class="panel line3 column2" id="panel4">
+            <div class="panel-title"><p>系统公告</p></div>
+            <div class="ggb">
+                <ul>
+                    <li class="odd">1、天津消防总队订购50台消防机器人，工期三个月</li>
+                    <li>2、8月3日省委书记莅临视察</li>
+                    <li class="odd">3、上半年累计生产300台，同比增长20</li>
+                </ul>
+            </div>
+        </div>
+        <div class="panel line4 column1" id="panel5">
+            <div class="panel-title"><p>设备检修计划</p></div>
+            <div class="grid-container" id="grid3"></div>
+            <table id="tb1">
+                <tr><th colspan="7">2013-06-20</th><th colspan="7">2013-06-23</th><th colspan="7">2013-06-30</th><th colspan="7">2013-07-07</th></tr>
+                <tr><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td><td>日</td><td>一</td><td>二</td><td>三</td><td>四</td><td>五</td><td>六</td></tr>
+                <tr>
+                    <td colspan="28"><div class="chart-container" id="chart2"></div></td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="panel line4 column2" id="panel6">
+            <div class="panel-title"><p>仓储物流</p></div>
+            <div class="ggb">
+                <ul>
+                    <li class="odd">1、今日消防机器人入库10台</li>
+                    <li>2、今日消防机器人出库12台</li>
+                    <li class="odd">3、今日070513零部件已入库完毕</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="../../../js/rem.js"></script>
+    <script src="../../../js/config.js"></script>
+    <script src="../../../js/require-2.1.11.js" data-main="page"></script>
+</body>
+</html>

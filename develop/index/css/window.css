@@ -1,0 +1,91 @@
+﻿td{
+    text-align:center;
+}
+
+.mo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    top: 0;
+    z-index: 8;
+}
+
+.hide {
+    margin-left: -9999px;
+}
+
+.win{
+    position:absolute;
+    z-index:9;
+}
+
+.panel {
+    /*margin-left: 0.11rem;*/
+    margin-right: 0.1rem;
+    /*height: 7rem;*/
+    border: solid 3px #ccc;
+    margin-top: 0.1rem;
+    background-color: #0a2033;
+    /*border-image-source: url(../images/zborder.png);
+    border-image-slice: 26;
+    border-image-width: 0.3rem;
+    border-image-outset: 1;*/
+}
+
+.panel-title {
+    background-color: #1b2f4f;
+    /*border-bottom: solid 1px #bababa;*/
+    font-weight: 600;
+    height: 0.41rem;
+}
+
+.panel-title > p {
+        color: #bccae1;
+        font-size: 0.18rem;
+        font-family: 'Microsoft YaHei';
+        line-height: 0.41rem;
+        float: left;
+        min-width: 1rem;
+        margin-left: 0.25rem;
+    }
+
+
+textarea{
+    line-height:0.2rem;
+    padding:0;
+}
+
+.panel .grid-container{
+    border-bottom:none;
+    border-left:none;
+}
+
+
+#win6-1{
+    position:absolute;
+    top:2rem;
+    left:2rem;
+    width:15rem;
+    height:6rem;
+}
+
+#chart6-1{
+    /*height: 5.8rem;*/
+    height: 5.2rem;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
